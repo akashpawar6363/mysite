@@ -1,4 +1,5 @@
 const express = require("express");
+var path=require('path');
 const app = express();
 
 app.listen(3000, () => {
@@ -6,5 +7,5 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(public + "/index.html");
+  res.sendFile(path.join(___dirname + '/index.html'));
 });
